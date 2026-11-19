@@ -33,6 +33,9 @@ nav img {
     vertical-align: middle;
     border-radius: 12px;
 }
+nav img:hover {
+   transform: scale(1.1);
+}
 
 /* no underline or border around the image links */
 nav a {
