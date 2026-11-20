@@ -36,7 +36,40 @@
      This box is empty on purpose. In Part 7 you paste an interactive
      graphic BETWEEN the opening <div> and the closing </div> below.
      ===================================================================== -->
-<div class="showcase"></div>
+<div class="showcase">
+  <h2>My Favorite Books</h2>
+  <p id="book">Click to reveal a book not on this page!</p>
+  <button onclick="showBook()">Show Me a Book!</button>
+
+  <style>
+    .showcase {
+      text-align: center;
+      padding: 20px;
+    }
+    .showcase button {
+      background-color: pink;
+      padding: 10px;
+      border radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+
+  <script>
+    let books = [
+      "The Heroes of Olympus #3: The Mark of Athena by Rick Riordan",
+      "A Court of Mist and Fury by Sarah J. Maas",
+      "Fourth WIng by Rebecca Yarros",
+      "Without Merit by Colleen Hoover"
+      ];
+
+    let number = 0;
+
+    function showBook() {
+      document.getElementById("book").innerText = books[number];
+      number = (number + 1) % books.length;
+    }
+  </script>
+</div>
 
 <!-- Footer: fill in your name -->
 <footer>Built by Miranda De La Cruz &middot; BMIS 235</footer>
